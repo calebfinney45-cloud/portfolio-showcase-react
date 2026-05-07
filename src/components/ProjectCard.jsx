@@ -1,18 +1,15 @@
 import { Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
 
 export default function ProjectCard({project}) {
     return(
-        <div className="y-8">
+        <div className="py-8">
             <Card className={"bg-white border-zinc-200"} >
                 <CardHeader>
                     <div className="flex justify-between items-center">
                         <CardTitle>
                             {project.name}
                         </CardTitle>
-                        <span className="text-[10px] font-bold uppercase bg bg-zinc-100 px-2 py rounded text-zinc-600">
+                        <span className="text-[10px] font-bold uppercase bg-zinc-100 px-2 py rounded text-zinc-600">
                             {project.title}
                         </span>
                     </div>
