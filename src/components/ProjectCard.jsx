@@ -7,10 +7,10 @@ export default function ProjectCard({project}) {
                 <CardHeader>
                     <div className="flex justify-between items-center">
                         <CardTitle>
-                            {project.name}
+                            {project.title}
                         </CardTitle>
                         <span className="text-[10px] font-bold uppercase bg-zinc-100 px-2 py rounded text-zinc-600">
-                            {project.title}
+                            {project.category}
                         </span>
                     </div>
                 </CardHeader>
