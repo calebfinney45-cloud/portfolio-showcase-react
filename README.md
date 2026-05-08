@@ -19,13 +19,19 @@ ProjectVault is a clean, responsive dashboard designed to manage and display dev
 ## Setup and Installation
 
 1. Install dependencies:
+```
    npm install
+```   
 
 2. Start the development server:
+```
    npm run dev
+```
 
 3. Build for production:
+```
    npm run build
+```  
 
 ## Usage Instructions
 1. Add Projects: Use the form to input project metadata. Use valid image URLs for thumbnails.
