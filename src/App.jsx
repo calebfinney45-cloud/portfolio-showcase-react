@@ -29,9 +29,6 @@ export default function App() {
             </div>
             <h1 className="text-xl font-bold tracking-tight">ProjectVault</h1>
           </div>
-          <div className="hidden md:block text-[10px] font-mono text-indigo-300 uppercase tracking-[0.2em]">
-            Status: Ready
-          </div>
         </div>
       </header>
 

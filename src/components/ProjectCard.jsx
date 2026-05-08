@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
-import { Trash2 } from "lucide-react";
+import { Trash2, CircleChevronUp, CircleChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function ProjectCard({ project, onDelete }) {
