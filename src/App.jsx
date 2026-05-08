@@ -14,6 +14,11 @@ export default function App() {
     setProjects((prevProjects) => [finalProject, ...prevProjects]);
   }
 
+  function deleteProject(id) {
+    const updatedProjects = projects.filter((project) => project.id !== id);
+    setProjects(updatedProjects);
+  }
+
   return (
     <div className="min-h-screen bg-zinc-50 flex flex-col font-sans">
       <header className="bg-indigo-950 text-indigo-50 py-5 px-6 shadow-lg border-b border-indigo-900">
@@ -43,7 +48,7 @@ export default function App() {
             </h2>
             <div className="h-px] bg-zinc-200 grow" />
           </div>
-          <ProjectList projects={projects} />
+          <ProjectList projects={projects} onDeleteProject={deleteProject} />
         </section>
       </main>
 
