@@ -74,7 +74,7 @@ export default function AddForm({onAddProject}) {
                 </div>
                 <Button 
                   type="submit"
-                  className={"bg-zinc-900 hover:bg-zinc-800 text-white"}
+                  className={"bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-6 rounded-xl transition-all shadow-md active:scale-[0.98]"}
                 >
                   Add Project
                 </Button>
