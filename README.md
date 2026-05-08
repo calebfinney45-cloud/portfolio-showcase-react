@@ -1,6 +1,8 @@
 # ProjectVault
 A minimalist project showcase built for the modern developer.
 
+[Live Demo: Vercel](https://portfolio-showcase-react.vercel.app/)
+
 ProjectVault is a clean, responsive dashboard designed to manage and display development projects. It features real-time search, category filtering, and a toggle system for project descriptions to maintain a clean interface.
 
 ## Key Features
