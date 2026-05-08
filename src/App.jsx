@@ -2,9 +2,36 @@ import { useState } from "react";
 import ProjectList from "@/components/ProjectList";
 import AddForm from "@/components/AddForm";
 
-
 export default function App() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([
+    {
+      id: "1",
+      title: "ProjectVault Dashboard",
+      category: "React",
+      description:
+        "A secure personal portfolio manager built with React, Tailwind CSS, and WSL. Features real-time search, dynamic filtering, and a toggleable interface for clean data visualization.",
+      image:
+        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      id: "2",
+      title: "Weather Alert System",
+      category: "JavaScript",
+      description:
+        "Integrated with the National Weather Service API to fetch live alerts. Uses DOM manipulation and the Fetch API to provide real-time updates based on geographic locations.",
+      image:
+        "https://images.stockcake.com/public/6/c/f/6cf08209-47d4-4b2e-9b70-14217c6f8d09_large/stormy-beach-view-stockcake.jpg",
+    },
+    {
+      id: "3",
+      title: "Expense Tracker",
+      category: "Full-stack",
+      description:
+        "A financial management tool featuring search filtering, form handling, and state-driven item deletion. Built to practice complex React hooks and state management.",
+      image:
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop",
+    },
+  ]);
 
   function handleAddProject(newProject) {
     const finalProject = {
@@ -52,12 +79,13 @@ export default function App() {
       <footer className="bg-indigo-950 text-indigo-300/60 py-10 border-t border-indigo-900">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs uppercase tracking-widest">
-            &copy; 2026 Portfolio Dashboard
+            &copy; 2026 Portfolio Dashboard: *Caleb Finney*
           </p>
           <div className="flex gap-6 text-[10px] font-bold uppercase">
             <span>React</span>
             <span>Tailwind</span>
             <span>WSL</span>
+            <span>Shadcnui</span>
           </div>
         </div>
       </footer>
