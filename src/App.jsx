@@ -3,6 +3,7 @@ import ProjectList from "@/components/ProjectList";
 import AddForm from "@/components/AddForm";
 
 export default function App() {
+  // Main list of projects: any projects added are 'stored' here until the page is refreshed
   const [projects, setProjects] = useState([
     {
       id: "1",
@@ -33,6 +34,7 @@ export default function App() {
     },
   ]);
 
+  // Logic to add new project: unique ID generated, new data is spread into existing array so we don't lose previous projects
   function handleAddProject(newProject) {
     const finalProject = {
       ...newProject,
@@ -41,6 +43,7 @@ export default function App() {
     setProjects((prevProjects) => [finalProject, ...prevProjects]);
   }
 
+  // Logic to remove a project: creates a new array, filtering out the ID we clicked
   function deleteProject(id) {
     const updatedProjects = projects.filter((project) => project.id !== id);
     setProjects(updatedProjects);
@@ -65,6 +68,7 @@ export default function App() {
           <AddForm onAddProject={handleAddProject} />
         </section>
 
+        {/* Project Display Section */}
         <section className="space-y-6">
           <div className="flex items-center gap-4">
             <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-widest">
