@@ -9,6 +9,9 @@ export default function ProjectCard({ project, onDelete }) {
         <CardHeader>
           <div className="flex justify-between items-center">
             <CardTitle>{project.title}</CardTitle>
+            <span className="text-[10px] font-bold uppercase bg-zinc-100 px-2 py rounded text-zinc-600">
+              {project.category}
+            </span>
             <Button 
                 variant="ghost"
                 size="icon"
@@ -16,9 +19,6 @@ export default function ProjectCard({ project, onDelete }) {
             >
                 <Trash2 size={"16"} />
             </Button>
-            <span className="text-[10px] font-bold uppercase bg-zinc-100 px-2 py rounded text-zinc-600">
-              {project.category}
-            </span>
           </div>
         </CardHeader>
         <CardContent>
