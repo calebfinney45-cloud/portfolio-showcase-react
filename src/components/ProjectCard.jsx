@@ -3,9 +3,9 @@ import { Trash2, CircleChevronUp, CircleChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 
-//Handles display for a single project card
+// Handles display for a single project card
 export default function ProjectCard({ project, onDelete }) {
-  //Local state to toggle description
+  // Local state to toggle description
   const [isOpen, setIsopen] = useState(false);
 
   return (

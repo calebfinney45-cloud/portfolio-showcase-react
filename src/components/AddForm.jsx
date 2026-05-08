@@ -11,18 +11,19 @@ const initialState = {
 };
 
 export default function AddForm({ onAddProject }) {
+  // State object to track all inputs at once  
   const [formData, setFormData] = useState(initialState);
-
+  // Updates specific key(name) with new value
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
+  // Prevents page refresh and passes data back up to parent (App.jsx)
   const handleSubmit = (e) => {
     e.preventDefault();
     onAddProject(formData);
-    setFormData(initialState);
+    setFormData(initialState);  // Resets form after add is succesful
   };
 
   return (
@@ -74,10 +75,11 @@ export default function AddForm({ onAddProject }) {
           >
             Image Url
           </label>
+          {/* type="url" used for basic browser-level validation */}
           <Input
             id="project-image"
             name="image"
-            type="url"
+            type="url"  
             placeholder="Image Url"
             value={formData.image}
             onChange={handleChange}
